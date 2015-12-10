@@ -1,0 +1,103 @@
+@charset "UTF-8"
+
+.animated
+  animation-duration: 1s
+  animation-fill-mode: both
+
+
+/* - - - - BEGIN CUSTOM - - - - - */
+
+
+//FADE IN EASY
+@keyframes fadeInEasy 
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+
+.fadeInEasy 
+  animation-name: fadeInEasy
+
+
+//FADE IN UP EASY
+@keyframes fadeInUpEasy 
+  0% 
+    opacity: 0
+    margin-bottom: -2em
+  100% 
+    opacity: 1
+    margin-bottom: 0em
+
+.fadeInUpEasy 
+  animation-name: fadeInUpEasy
+
+
+//FADE IN LEFT EASY
+@keyframes fadeInLeftEasy 
+  0% 
+    opacity: 0
+    transform: translate3d(6%, 0, 0)
+  100% 
+    opacity: 1
+    transform: none
+
+.fadeInLeftEasy 
+  animation-name: fadeInLeftEasy
+
+
+//FADE IN RIGHT EASY
+@keyframes fadeInRightEasy 
+  0% 
+    opacity: 0
+    transform: translate3d(-6%, 0, 0)
+  100% 
+    opacity: 1
+    transform: none
+
+.fadeInRightEasy 
+  animation-name: fadeInRightEasy
+
+
+
+//FADE IN GROW
+@keyframes fadeInGrow 
+  0% 
+    opacity: 0
+    transform: scale(0,0)
+  50% 
+    opacity: 1
+  100% 
+    transform: scale(1,1)
+
+.fadeInGrow 
+  animation-name: fadeInGrow
+
+
+
+//FADE IN DROP IN
+@keyframes dropInPopIn
+  0%
+    opacity: 0
+    transform: translate(0, -5em)
+  100%
+    opacity: 1
+    transform: translate(0, 0em)
+
+.dropInPopIn 
+  animation-name: dropInPopIn
+
+
+//FADE IN DROP IN EASY
+@keyframes dropInPopInEasy
+  0%
+    opacity: 0
+    transform: translate(0, -2em)
+  100%
+    opacity: 1
+    transform: translate(0, 0em)
+
+.dropInPopInEasy 
+  animation-name: dropInPopInEasy
+
+
+/* - - - - END CUSTOM - - - - - */

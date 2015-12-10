@@ -1,0 +1,130 @@
+.rootBodyWrap {
+	width: 100%;
+	text-align: center;
+	margin-top: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 70vh;
+
+	h1 {
+		display: none;
+		font-size: 1.8em;
+	}
+
+	.homeNavWrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		width: 100%;
+
+		.homeNav {
+			width: 60%;
+			border-radius: $borderRadius1;
+			color: $br-white;
+			cursor: pointer;
+			padding: .8em 0 .8em 0;
+			margin-bottom: 1.6em;
+			font-weight: 700;
+			font-size: 1.05em;
+			letter-spacing: 0.08em;
+			background-color: $br-white;
+			border: 2px solid $br-black;
+			color: $br-black;
+		}
+
+		.homeNav:hover {
+			background-color: $br-black;
+			color: $br-white;
+
+			.linkly {
+				@extend .whiteLinkly;
+			}
+		}
+
+		.homeNavSee {
+			border: none;
+			margin-bottom: 1.2em;
+			width: 40%;
+			font-size: 3.1em;
+			padding-top: 0;
+			padding-bottom: 0;
+			transition: all 0.15s linear, width .3s cubic-bezier(0.85, 0.1, 0.82, 1.01), padding .3s cubic-bezier(0.85, 0.1, 0.82, 1.01);
+		}
+
+		.homeNavSee:hover {
+			border: none;
+			width: 100%;
+			padding: 1em 0 1em 0;
+		}
+
+		.homeNavRead {
+		
+		}
+
+		.homeNavSay {
+		
+		}
+	}
+}
+
+
+@media screen and (min-width: $breakpoint1) {
+	.rootBodyWrap {
+		margin-top: 2em;
+
+		.homeNavWrap {
+			flex-wrap: wrap;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			.homeNav {
+				width: 34%;
+				margin-left: 2%;
+				margin-right: 2%;
+			}
+
+			.homeNavSee {
+				width: 100%;
+				font-size: 4.8em;		
+				margin-left: 10%;
+				margin-right: 10%;
+				margin-bottom: 0.7em;
+				width: 80%;
+				border-radius: 0.05em;
+			}
+
+			
+			.homeNavSee:hover {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint2) {
+	.rootBodyWrap {
+		margin-top: 4em;
+
+		.homeNavWrap {
+
+			.homeNav {
+				width: 24%;
+			}
+
+			.homeNavSee {
+				font-size: 5.4em;				
+				margin-bottom: 0.5em;
+				margin-left: 15%;
+				margin-right: 15%;
+				width: 70%;
+			}
+		}
+	}
+}

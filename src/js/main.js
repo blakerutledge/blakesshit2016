@@ -34,11 +34,11 @@ class Main {
         let splashButton = document.querySelectorAll(".home-work-anchor");
 
         splashButton[0].addEventListener( 'mouseover', function() {
-          homeButtonEnter();
+          // homeButtonEnter();
         });
 
         splashButton[0].addEventListener( 'mouseout', function() {
-          homeButtonLeave();
+          // homeButtonLeave();
         });
 
         var clipboard = new Clipboard('#footer-email');

@@ -77,8 +77,9 @@
 	justify-content: center;
 	align-items: center;
 	transform: translateX(-.24em);
-	transition: transform .8s cubic-bezier(0, 0.96, 0.13, 1.01), color .1s ease-in-out, letter-spacing 1.2s cubic-bezier(0, 0.96, 0.13, 1.01);
+	transition: transform .8s cubic-bezier(0, 0.96, 0.13, 1.01), color .1s ease-in-out, letter-spacing .8s cubic-bezier(0, 0.96, 0.13, 1.01);
 	letter-spacing: 0.06em;
+	margin-bottom: 1.1em;
 }
 
 .home-work-arrow {
@@ -121,8 +122,8 @@
 
 .home-work-wrap a:hover .home-work-wrap-inner {
 	transform: translateX(.24em);
-	color: $br-white;
-	//letter-spacing: 0.12em;
+	// color: $br-white;
+	letter-spacing: 0.12em;
 }
 
 
@@ -147,6 +148,9 @@
 	}
 	.home-container-inner {
 		padding: 55px;
+	}
+	.home-work-wrap-inner {
+		margin-bottom: initial;
 	}
 	.home-name-wrap {
 		font-size: 1.62em;

@@ -34,11 +34,11 @@ class Main {
         let splashButton = document.querySelectorAll(".home-work-anchor");
 
         splashButton[0].addEventListener( 'mouseover', function() {
-          // homeButtonEnter();
+          homeButtonEnter();
         });
 
         splashButton[0].addEventListener( 'mouseout', function() {
-          // homeButtonLeave();
+          homeButtonLeave();
         });
 
         var clipboard = new Clipboard('#footer-email');
@@ -72,27 +72,11 @@ class Main {
 
 // Change home screen colors on big button hover
 function homeButtonEnter() {
-  document.querySelectorAll(".home-container")[0].classList.add("home-container-reverse");
-  document.querySelectorAll(".screenLayer")[0].classList.add("screenLayer-reverse")
-  document.querySelectorAll(".home-name-wrap")[0].classList.add("home-name-wrap-reverse");
-
-  for (let i = 0; i < 4; i++) {
-    console.log( document.querySelectorAll(".footer-icon-path")[i].fill );
-    document.querySelectorAll(".footer-icon-path")[i].fill = "#FFFFFF";
-    console.log( document.querySelectorAll(".footer-icon-path")[i].fill );
-  }
-
+  document.querySelectorAll(".screenLayer")[0].classList.add("screenLayer-reverse");
 }
 
 function homeButtonLeave() {
-  document.querySelectorAll(".home-container")[0].classList.remove("home-container-reverse");
-  document.querySelectorAll(".screenLayer")[0].classList.remove("screenLayer-reverse")
-  document.querySelectorAll(".home-name-wrap")[0].classList.remove("home-name-wrap-reverse")
-
-  for (let i = 0; i < 4; i++) {
-    document.querySelectorAll(".footer-icon-path")[i].fill = "#000000";
-  }
-  
+  document.querySelectorAll(".screenLayer")[0].classList.remove("screenLayer-reverse");
 }
 
 

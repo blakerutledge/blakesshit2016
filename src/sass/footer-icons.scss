@@ -1,16 +1,14 @@
 .footer-icons-wrap {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
+	font-size: 0.9em;
+	display: inline-block;
 
 }
 
 .footer-icon-pair {
 	cursor: pointer;
 	transition: opacity .15s ease-in-out;
-
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .footer-icon-pair-inner {
@@ -19,8 +17,8 @@
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	padding-left: 0.4em;
-	padding-right: 0.4em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
 }
 
 .footer-icon-pair-inner:first-child {
@@ -36,17 +34,19 @@
 
 .footer-label {
 	color: $br-black;
-	font-size: 1.08em;
+	font-size: 1.16em;
 	margin-left: 0.5em;
 	width: 0em;
 	transform: translateX(-.5em);
 	overflow: hidden;
 	transition: width .4s cubic-bezier(0, 0.96, 0.02, 0.99), transform 0.9s cubic-bezier(0, 0.53, 0.1, 1);
-
+    padding-top: .309em;
+    padding-bottom: .309em;
 }
 
 .footer-icon-email {
 	display: none;
+
 }
 
 .footer-label-email {
@@ -75,7 +75,15 @@
 		transform: translateX(-.5em);
 	}
 	.footer-icons-wrap {
-		
+		font-size: .96em;
+	}
+	.footer-label {
+		font-size: 1.32em;
+		padding-bottom: .1em;
+	}
+	.footer-icon-pair-inner {
+		padding-left: 0.6em;
+		padding-right: 0.6em;
 	}
 	.footer-icon-pair:hover .footer-label-github {
 		width: 3.05em;
@@ -97,6 +105,15 @@
 }
 
 @media screen and (min-width: $breakpoint2) {
-
+	.footer-icon-pair-inner {
+		padding-left: 0.8em;
+		padding-right: 0.8em;
+	}
+	.footer-icons-wrap {
+		font-size: 1.06em;
+	}
+	.footer-label {
+		font-size: 1.12em;
+	}
 
 }

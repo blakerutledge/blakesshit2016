@@ -1,19 +1,15 @@
 .home-container {
 	width: 100%;
 	height: 100vh;
-	border: 20px solid $br-black;
+	border: 12px solid $br-black;
 	overflow: hidden;
 	transition: border .1s ease-in-out;
 }
 
-.home-container-reverse {
-	border: 20px solid $br-white;
-}
-
 .home-container-inner {
 	padding: 30px;
-	width: calc(100% - 40px);
-	height: calc( 100vh - 40px);
+	width: 100%;
+	height: calc( 100vh - 24px);
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -77,14 +73,14 @@
 	justify-content: center;
 	align-items: center;
 	transform: translateX(-.24em);
-	transition: transform .8s cubic-bezier(0, 0.96, 0.13, 1.01), color .1s ease-in-out, letter-spacing .8s cubic-bezier(0, 0.96, 0.13, 1.01);
+	transition: transform .6s cubic-bezier(0, 0, 0.25, 1.03), color .1s ease-in-out, letter-spacing .6s cubic-bezier(0, 0, 0.25, 1.03);
 	letter-spacing: 0.06em;
 	margin-bottom: 1.1em;
 }
 
 .home-work-arrow {
 	width: .48em;
-	transition: opacity .1s linear, transform .8s cubic-bezier(0, 0.96, 0.13, 1.01);
+	transition: opacity .1s linear, transform 1.4s cubic-bezier(0, 0.96, 0.13, 1.01);
 }
 
 .home-work-arrow-path {
@@ -121,9 +117,9 @@
 }
 
 .home-work-wrap a:hover .home-work-wrap-inner {
-	transform: translateX(.24em);
+	transform: translateX(0.3em);
 	// color: $br-white;
-	letter-spacing: 0.12em;
+	letter-spacing: 0.10em;
 }
 
 
@@ -143,6 +139,13 @@
 }
 
 @media screen and (min-width: $breakpoint1) {
+	.home-container {
+		border: 18px solid $br-black;
+	}
+	.home-container-inner {
+		width: 100%;
+		height: calc( 100vh - 36px);
+	}
 	.home-portfolio {
 		display: inline-block;
 	}
@@ -161,6 +164,13 @@
 }
 
 @media screen and (min-width: $breakpoint2) {
+	.home-container {
+		border: 24px solid $br-black;
+	}
+	.home-container-inner {
+		width: 100%;
+		height: calc( 100vh - 48px);
+	}
 	.home-container-inner {
 		padding: 80px;
 	}

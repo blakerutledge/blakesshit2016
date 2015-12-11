@@ -54,4 +54,3 @@
 <?php endif; ?>
 
 </div>
-<div class="screenLayer">

@@ -15,7 +15,7 @@
 			<li> 
 				blake@blakerutledge.com
 			</li>			
-
+		</ul>
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>

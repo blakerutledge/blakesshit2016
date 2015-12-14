@@ -1,6 +1,11 @@
 .footer-icons-wrap {
 	font-size: 0.9em;
-	display: inline-block;
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: stretch;
+	align-items: center;
 
 }
 
@@ -50,7 +55,8 @@
 }
 
 .footer-label-email {
-	width: 11em;
+	width: 100%;
+	text-align: center;
 	transform: translateX(0);
 }
 
@@ -84,6 +90,10 @@
 	.footer-icon-pair-inner {
 		padding-left: 0.6em;
 		padding-right: 0.6em;
+	}
+	.footer-icon-pair:hover .footer-label-about {
+		width: 2.6em;
+		transform: translateX(0);
 	}
 	.footer-icon-pair:hover .footer-label-github {
 		width: 3.05em;

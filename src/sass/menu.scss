@@ -6,14 +6,17 @@
 	align-items: baseline;
 	justify-content: flex-start;
 	color: $br-black;
-	padding-top: 2em;
+	font-size: 5.4vw;
 
 	h1, h4 {
-		font-size: 1.06em;
-		font-weight: 300;
 		margin-top: 0;
 		margin-bottom: 0em;
+		// font-size: 1em;
+	}
 
+	h4 {
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 
 	.blackLinklyBack {
@@ -26,47 +29,22 @@
 		
 }
 
-.menuWrapMid {
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
-	justify-content: space-between;
-}
 
 @media screen and (min-width: $breakpoint1) {
 	.menuWrap {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: baseline;
-
-		h1, h4 {
-			font-size: 1.18em;
-		}
+		font-size: 1.62em;
 	}
 }
 
 
 @media screen and (min-width: $breakpoint2) {
-	.menuWrap {
-		h4  {
-			font-size: 1.4em;
-		}
-
-		h1 {
-			font-size: 1.65em;
-		}
+	.menuWrap {		
+		font-size: 1.7em;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: baseline;
 	}
 
-	.menuWrapMid {
-		h1 {
-			font-size: 2.2em;
-		}
-	}
 
-	.menuWrapBot {
-		h1 {
-			font-size: 1.4em;
-		}
-	}
 
 }

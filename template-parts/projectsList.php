@@ -7,7 +7,7 @@
 				if ( in_category( 'motion' ) ) : echo "motionProject "; endif;
 				if ( in_category( 'frontend' ) ) : echo "frontendProject "; endif; 
 				?>" id="<?php echo $post->post_name; ?>">
-				<h1 class='linkly whiteLinkly'><?php the_title(); ?></h1>
+				<h3 class='linkly whiteLinkly'><?php the_title(); ?></h3>
 				<div class='moduleDeetsGroup'>
 					<h5> <?php the_time('m'); ?> &nbsp;&vert;&nbsp;  <?php the_time('Y'); ?></h5>
 					<div class='projectModuleIcons'>

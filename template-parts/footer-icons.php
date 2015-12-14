@@ -1,13 +1,13 @@
 <div class="footer-icons-wrap">
 
 	<div class="footer-icon-pair">
-		<a href="https://github.com/blakerutledge">
-			<div class="footer-icon-pair-inner footer-icon-pair-inner-github">
+		<a href="/about.html">
+			<div class="footer-icon-pair-inner">
 				<div class="footer-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40"><g class="footer-icon-path" fill="#000000"><defs><path id="a" d="M-8.44 469.33h1440v810h-1440z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><circle clip-path="url(#b)" fill="#000000" cx="722.12" cy="863.76" r="836.45"/><path class="footer-icon-path"  d="M20 0C8.97 0 0 8.97 0 20s8.97 20 20 20 20-8.97 20-20S31.03 0 20 0zm5.38 36.18c-.85.15-1.15-.37-1.15-.82 0-.56.02-2.4.02-4.68 0-1.59-.55-2.63-1.16-3.16 3.8-.42 7.79-1.86 7.79-8.42 0-1.86-.66-3.38-1.75-4.57.18-.43.76-2.17-.17-4.52 0 0-1.43-.46-4.69 1.75-1.36-.38-2.82-.57-4.27-.57-1.45.01-2.91.2-4.27.57-3.26-2.21-4.69-1.75-4.69-1.75-.93 2.35-.34 4.08-.17 4.52-1.09 1.19-1.75 2.71-1.75 4.57 0 6.53 3.98 8 7.77 8.43-.49.43-.93 1.18-1.08 2.28-.97.44-3.44 1.19-4.97-1.42 0 0-.9-1.64-2.61-1.76 0 0-1.66-.02-.12 1.04 0 0 1.12.52 1.89 2.49 0 0 1 3.31 5.75 2.29.01 1.42.02 2.49.02 2.9 0 .45-.31.97-1.15.82-.02-.01-.45-.15-.64-.23.17.07.34.12.51.18C7.78 33.85 2.95 27.49 2.95 20c0-9.42 7.64-17.05 17.05-17.05S37.05 10.58 37.05 20c0 7.54-4.89 13.93-11.67 16.18z"/></g></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40"><defs><path id="a" d="M-200.44 469.33h1440v810h-1440z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><circle clip-path="url(#b)" fill="#00C29E" cx="530.12" cy="863.76" r="836.45"/><g><path d="M20.61 1.24C9.76.9.9 9.76 1.24 20.61c.31 9.83 8.32 17.83 18.14 18.14 10.85.35 19.72-8.52 19.37-19.37-.31-9.82-8.31-17.82-18.14-18.14zm.85 34.7c-9.97.89-18.29-7.43-17.4-17.4.68-7.64 6.84-13.8 14.48-14.48 9.97-.89 18.29 7.43 17.4 17.4-.68 7.65-6.84 13.8-14.48 14.48z"/><path d="M18.73 16.85h3.38l-1.66 11.83h-3.38l1.66-11.83zm.28-3.52c0-1.27 1.04-2.2 2.25-2.2.99 0 1.72.7 1.72 1.69 0 1.27-1.07 2.17-2.28 2.17-.99 0-1.69-.67-1.69-1.66z"/></g></svg>
 				</div>
-				<div class="footer-label footer-label-github">
-					github
+				<div class="footer-label footer-label-about">
+					about
 				</div>
 			</div>
 		</a>
@@ -27,6 +27,19 @@
 	</div>
 
 	<div class="footer-icon-pair">
+		<a href="https://github.com/blakerutledge">
+			<div class="footer-icon-pair-inner footer-icon-pair-inner-github">
+				<div class="footer-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40"><g class="footer-icon-path" fill="#000000"><defs><path id="a" d="M-8.44 469.33h1440v810h-1440z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><circle clip-path="url(#b)" fill="#000000" cx="722.12" cy="863.76" r="836.45"/><path class="footer-icon-path"  d="M20 0C8.97 0 0 8.97 0 20s8.97 20 20 20 20-8.97 20-20S31.03 0 20 0zm5.38 36.18c-.85.15-1.15-.37-1.15-.82 0-.56.02-2.4.02-4.68 0-1.59-.55-2.63-1.16-3.16 3.8-.42 7.79-1.86 7.79-8.42 0-1.86-.66-3.38-1.75-4.57.18-.43.76-2.17-.17-4.52 0 0-1.43-.46-4.69 1.75-1.36-.38-2.82-.57-4.27-.57-1.45.01-2.91.2-4.27.57-3.26-2.21-4.69-1.75-4.69-1.75-.93 2.35-.34 4.08-.17 4.52-1.09 1.19-1.75 2.71-1.75 4.57 0 6.53 3.98 8 7.77 8.43-.49.43-.93 1.18-1.08 2.28-.97.44-3.44 1.19-4.97-1.42 0 0-.9-1.64-2.61-1.76 0 0-1.66-.02-.12 1.04 0 0 1.12.52 1.89 2.49 0 0 1 3.31 5.75 2.29.01 1.42.02 2.49.02 2.9 0 .45-.31.97-1.15.82-.02-.01-.45-.15-.64-.23.17.07.34.12.51.18C7.78 33.85 2.95 27.49 2.95 20c0-9.42 7.64-17.05 17.05-17.05S37.05 10.58 37.05 20c0 7.54-4.89 13.93-11.67 16.18z"/></g></svg>
+				</div>
+				<div class="footer-label footer-label-github">
+					github
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="footer-icon-pair">
 		<a href="http://codepen.io/blakerutledge">
 			<div class="footer-icon-pair-inner">
 				<div class="footer-icon">
@@ -39,7 +52,7 @@
 		</a>
 	</div>
 
-	<div class="footer-icon-pair">
+	<div class="footer-icon-pair footer-icon-pair-email">
 		<a>
 			<div class="footer-icon-pair-inner">
 				<div class="footer-icon footer-icon-email">

@@ -156,3 +156,32 @@ add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
 function my_embed_oembed_html($html, $url, $attr, $post_id) {
   return '<div class="video-container">' . $html . '</div>';
 }
+
+function Get_most_recent_permalink(){
+    global $post;
+    $tmp_post = $post;
+    $args = array(
+        'numberposts'     => 1,
+        'offset'          => 0,
+        'orderby'         => 'post_date',
+        'order'           => 'DESC' );
+    $myposts = get_posts( $args );
+    $permalink = get_permalink($myposts[0]->ID);
+    $post = $tmp_post;
+    return $permalink;
+}
+
+function Get_most_recent_title(){
+    global $post;
+    $tmp_post = $post;
+    $args = array(
+        'numberposts'     => 1,
+        'offset'          => 0,
+        'orderby'         => 'post_date',
+        'order'           => 'DESC' );
+    $myposts = get_posts( $args );
+    $permalink = get_permalink($myposts[0]->ID);
+    $post = $tmp_post;
+    $post_title = $myposts[0]->post_title;
+    return $post_title;
+}

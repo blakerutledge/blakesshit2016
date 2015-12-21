@@ -52,9 +52,11 @@
 		</a>
 	</div>
 
-	<div class="footer-icon-pair footer-icon-pair-email">
+	<div id="footer-email-link" class="footer-icon-pair footer-icon-pair-email"  data-clipboard-text="blake@blakerutledge.com">
 		<a>
 			<div class="footer-icon-pair-inner">
+				<div class="copied-alert-triangle"></div>
+				<div class="copied-alert">Copied!</div>
 				<div class="footer-icon footer-icon-email">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
 						<g class="footer-icon-path" fill="#000000"><defs><path id="a" d="M-153.44 469.33h1440v810h-1440z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><circle clip-path="url(#b)" cx="577.12" cy="863.76" r="836.45"/><g><path  d="M29.54 12.56H10.46c-.87 0-1.58.71-1.58 1.58v11.73c0 .87.71 1.58 1.58 1.58h19.08c.87 0 1.58-.71 1.58-1.58V14.14c0-.88-.71-1.58-1.58-1.58zm-2.13 2.21l-7.39 5.05-7.42-5.05h14.81zM11.09 25.23v-8.82l7.69 5.22c.37.25.8.38 1.22.38.43 0 .85-.13 1.23-.38l7.69-5.22v8.82H11.09z"/><path d="M20.65.05C9.11-.32-.32 9.11.05 20.65c.33 10.45 8.85 18.97 19.3 19.3 11.54.37 20.98-9.06 20.61-20.61C39.62 8.89 31.11.38 20.65.05zm.9 36.91C10.94 37.9 2.1 29.05 3.04 18.45c.73-8.13 7.27-14.68 15.4-15.4 10.61-.95 19.46 7.9 18.52 18.51-.73 8.13-7.28 14.67-15.41 15.4z"/></g></g></svg>
@@ -65,5 +67,6 @@
 			</div>
 		</a>
 	</div>
+
 
 </div>

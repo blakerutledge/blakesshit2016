@@ -25,12 +25,17 @@
 	margin-right: 0;
 }
 
+.footer-icon-pair:first-child {
+	padding-left: 0;
+}
+
 .footer-icon-pair-inner {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .footer-icon {
@@ -46,6 +51,7 @@
 
 .footer-label {
 	color: $br-black;
+	position: relative;
 	font-size: 1.16em;
 	width: 0em;
 	transform: translateX(-.5em);
@@ -80,6 +86,51 @@
 	}
 }
 
+.copied-alert {
+	font-size: 1.05em;
+	position: absolute;
+	color: $br-white;
+	background-color: $br-black;
+	border-radius: 0.2em;
+	padding: 0.3em 0em;
+	text-align: center;
+	width: 8em;
+	// left: 50%;
+	left: 8.4em;
+	top: 3.6em;
+	display: none;
+
+	@media screen and (min-width: $breakpoint1) {
+		top: initial;
+		bottom: 3.3em;
+		font-size: 0.8em;
+	}
+}
+.copied-alert-triangle {
+	font-size: 1.05em;
+	position: absolute;
+	background-color: $br-black;
+	width: .7em;
+	height: .7em;
+	left: 12.4em;
+	// margin-left: -0.5em;
+	transform: rotate(45deg);
+	top: 3.3em;
+	display: none;
+
+	@media screen and (min-width: $breakpoint1) {
+		top: initial;
+		bottom: 3.1em;
+		font-size: 0.8em;
+	}
+}
+
+.copied-alert-showing {
+	@media screen and (min-width: $breakpoint1) {
+		display: block;
+	}
+}
+
 
 @media screen and (min-width: $breakpoint1) {
 	.footer-icons-wrap {
@@ -109,6 +160,7 @@
 		margin-left: 0.5em;
 	}
 	.footer-icon-pair-inner {
+		position: relative;
 		justify-content: flex-start;
 		padding-left: 0.6em;
 		padding-right: 0em;

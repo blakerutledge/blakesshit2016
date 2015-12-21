@@ -86,7 +86,7 @@
 	margin-top: 0;
 
 	a{
-		width: calc(100% - 4.5em);
+		width: 100%;
 		cursor: pointer;
 	}
 
@@ -94,37 +94,37 @@
 		cursor: pointer;
 		transition: padding-left 0.8s cubic-bezier(0, 0.78, 0.1, 1);
 		color: $br-white;
-		width: calc(100%);
-		margin-left: 4.5em;
-		margin-bottom: .4em;
-		padding-top: .4em;
-		padding-bottom: .4em;
+		width: 100%;
+		// margin-left: 4.5em;
+		margin-bottom: 0.4em;
+		padding-left: 1.2em;
+		padding-bottom: 1.5em;
+		padding-top: 1.5em;
 		background-color: $br-black;
 		border-radius: $borderRadius1;
 		text-align: left;
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: row;
 		flex-wrap: no-wrap;
-		justify-content: flex-end;
+		justify-content: flex-start;
 
 		h3 {
 			//width: 80%
-			transform: translate(-2.4em, .32em);
+			// transform: translate(-2.4em, .32em);
 			font-size: 1.24em;
 			letter-spacing: 0.06em;
 			font-weight: 700;
 		}
 
 		.moduleDeetsGroup{
-			width: 4em;
 			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: flex-start;
-			transform: translate(-5em, 0);
+			justify-content: center;
+			margin-left: .4em;
 
 			h5 {
-				color: $br-black;
+				display: inline-block;
+    			line-height: 2.05em;
+				// color: $br-black;
 				font-size: .78em;
 				font-weight: 300;
 				margin: 0;
@@ -132,12 +132,8 @@
 		}
 
 		.projectModuleIcons{
-			margin-top: .3em;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: no-wrap;
-			justify-content: flex-start;
-			align-items: center;
+			// margin-top: .3em;
+			display: none;
 
 			.projectModuleIcon{
 				@extend .bgImgFix;
@@ -180,6 +176,7 @@
 		}
 
 		.moduleDeetsGroup{
+
 			h5 {
 				color: $br-black;
 			}
@@ -246,12 +243,24 @@
 
 			.moduleDeetsGroup {
 				transform: translate(0, 0);
+				width: 4em;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+			    margin-left: 0;
 				
 				h5 {
 					color: $br-white;
+					line-height: initial;
 				}
 
 				.projectModuleIcons {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: no-wrap;
+					justify-content: flex-start;
+					align-items: center;
 					margin-top: 1.4em;
 					font-size: 0.78em;
 

@@ -6,7 +6,7 @@
 				if ( in_category( 'design' ) ) : echo "designProject "; endif;
 				if ( in_category( 'motion' ) ) : echo "motionProject "; endif;
 				if ( in_category( 'frontend' ) ) : echo "frontendProject "; endif; 
-				?>" id="<?php echo $post->post_name; ?>">
+				?>" id="<?php echo $post->post_name; ?>" data-teaser="<?php $key="data-teaser"; $attr = get_post_meta($post->ID, $key, true); echo "" . $attr; ?>">
 				<h3 class='linkly whiteLinkly'><?php the_title(); ?></h3>
 				<div class='moduleDeetsGroup'>
 					<h5> <?php the_time('m'); ?> &nbsp;&vert;&nbsp;  <?php the_time('Y'); ?></h5>

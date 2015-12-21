@@ -13,16 +13,6 @@
 	overflow: hidden;
 	text-align: center;
 
-	video {
-		width: auto;
-		height: auto;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-
-	}
-
 	.backgroundThumbnail {
 		width: 100%;
 		height: 100vh;
@@ -58,12 +48,22 @@
 }
 
 .bg-video-trash {
-	width: 1920px;
-	height: 1080px;
+	width: 100%;
+	// height: 56.25%;
 	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
+	// display: none;
+	opacity: 0;
+	transition: opacity 0.05s linear;
+
+	// width: auto;
+	// height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bg-video-visible {
+	opacity: 1;
 }
 
 .colorLayerProjectsHiding {
@@ -82,6 +82,6 @@
 	top: 0;
 	left: 0;
 	background-image: none;
-	background-color: $br-light-grey;
+	background-color: $br-black;
 	z-index: -9999;
 }

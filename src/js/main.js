@@ -2,10 +2,10 @@
 import verge from "./libs/verge.js"
 import Clipboard from "./libs/clipboard.min.js"
 
-var space, form, center, viewPort, bot, lastTime, colorIndex, mouseSpeed, timeout, colors, pt, projectCanvas
+var space, form, center, viewPort, bot, lastTime, colorIndex, mouseSpeed, timeout, colors, pt, projectCanvas, cw, ch, context
 
 pt = document.querySelectorAll("#pt")
-projectCanvas = document.querySelectorAll(".projects-teaser-container")
+projectCanvas = document.querySelectorAll(".teaser-dumpster")
 
 lastTime = -5000
 colorIndex = 0
@@ -38,73 +38,236 @@ class Main {
     if ( projectCanvas.length !== 0 ) {
       console.log("Projects page")
 
-      // - - - Get all of the vimeo streaming urls - - - //
+      // - - - BACKGROUND VIDEO BUILD  - - - //
       var canvasWrap = document.querySelector('.projects-teaser-container');
       var objs = document.querySelectorAll(".projectModule")
       var urls = {}
       var pairs = {}
-
       var dumpster = document.querySelector('.teaser-dumpster')
       for (var i = 0; i < objs.length; i++) {
-        // console.log( objs[i].id );
         var temp = [].filter.call(objs[i].attributes, function(at) { return /^data-/.test(at.name) })
-        // urls["video-"+objs[i].id] = temp[0].value
-        var string = "<video class='bg-video-trash' id='video-"+objs[i].id+"' src='" + temp[0].value + "' loop></video>"
+        var string = "<video class='bg-video-trash bgScale' id='video-"+objs[i].id+"' src='" + temp[0].value + "' loop muted ></video>"
         dumpster.innerHTML += string
         pairs[ "video-"+objs[i].id ] = document.querySelector( "#video-"+objs[i].id )
+        //Add event listeners to hover
         objs[i].addEventListener('mouseenter', function () {
-          // console.log( pairs["video-"+this.id] )
-          playMyVideo( pairs["video-"+this.id], canvasWrap)
+          document.querySelector("#video-"+this.id).style.opacity = "1"
+          document.querySelector("#video-"+this.id).play()
         });
         objs[i].addEventListener('mouseleave', function () {
-          // console.log( pairs["video-"+this.id] )
-          // pauseMyVideo( pairs["video-"+this.id], canvasWrap )
+          document.querySelector("#video-"+this.id).style.opacity = "0"
+          document.querySelector("#video-"+this.id).pause()
         });
       }
+      resizeToCover()
+      window.addEventListener("resize", function() {
+        resizeToCover();
+      });
+      //Resize video container
+      function resizeToCover() {
+        // use largest scale factor of horizontal/vertical
+        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+        if ( w*0.5625 > h) {
+          //wider. trim height, set to width
+          Array.prototype.forEach.call(document.querySelectorAll('.bgScale'), function(video) { 
+            video.style.width = w+"px"
+            video.style.height = "auto"
+          })
+        }
+        else {
+          Array.prototype.forEach.call(document.querySelectorAll('.bgScale'), function(video) { 
+            video.style.height = h+"px"
+            video.style.width = "auto"
+          })
+        }    
+      }
       
-      function draw(v,c,w,h) {
-          if(v.paused || v.ended) return false;
-          c.drawImage(v,0,0,w,h);
-          setTimeout(draw,1000/24,v,c,w,h);
+      //Project Tag Selector Logic
+      var iconDesign = true;
+      var iconMotion = true;
+      var iconFrontend = true;
+
+      var custom_event = "click";
+
+      var hexInner = "15.41,3.36 19.82,11 15.41,18.64 6.59,18.64 2.18,11 6.59,3.36 15.41,3.36"
+      var circleInner = "M11,3.26c4.27,0,7.74,3.47,7.74,7.74s-3.47,7.74-7.74,7.74S3.26,15.27,3.26,11S6.73,3.26,11,3.26";
+      var squareInner = "17.9,4.1 17.9,17.9 4.1,17.9 4.1,4.1 17.9,4.1";
+      var check = "9.89,15.35 5.81,11.27 7.49,9.58 9.89,11.98 14.51,7.36 16.19,9.04"
+
+      MorphSVGPlugin.convertToPath("#motion-check");
+      var checkSquare = new TimelineMax({paused:true});
+      var checkCircle = new TimelineMax({paused:true});
+      var checkHex = new TimelineMax({paused:true});
+
+      var t = .62;
+
+      checkSquare.to('#design-check', t, {
+        morphSVG:{shape:squareInner, shapeIndex:1},
+        ease: Elastic.easeInOut.config(1.7,1)
+      });
+      checkSquare.to('#design-icon', t*.5,{opacity:0.7}, "-="+t/2);
+
+      checkCircle.to('#motion-check', t, {
+        morphSVG:{shape:circleInner, shapeIndex:3},
+        ease: Elastic.easeInOut.config(1.7,1)
+      });
+      checkCircle.to('#motion-icon', t*.5,{opacity:0.7}, "-="+t/2);
+
+      checkHex.to('#frontend-check', t, {
+        morphSVG:{shape:hexInner, shapeIndex:3},
+        ease: Elastic.easeInOut.config(1.7,1)
+      });
+      checkHex.to('#frontend-icon', t*.5,{opacity:0.7}, "-="+t/2);
+
+      function moveSquareTrue() { 
+          if (!iconDesign) {
+              checkSquare.reverse();
+          }
+      }
+      function moveSquareFalse() { 
+          if (iconDesign) {
+              checkSquare.play(0); 
+          }
       }
 
-      function pauseMyVideo( video, canvas ) {
-        var context = canvas.getContext('2d');
-
-        var cw = Math.floor(canvas.clientWidth);
-        var ch = Math.floor(canvas.clientHeight);
-        canvas.width = cw;
-        canvas.height = ch;
-
-        video.pause();
-
-        draw(video,context,cw,ch);
+      function moveCircleTrue() { 
+          if (!iconMotion) {
+              checkCircle.reverse(); 
+          }
+      }
+      function moveCircleFalse() { 
+          if (iconMotion) {
+              checkCircle.play(0); 
+          }
       }
 
-      function playMyVideo(video, canvas) {
-        // var v = document.querySelector('.bg-video');
-        var context = canvas.getContext('2d');
-
-        var cw = Math.floor(canvas.clientWidth);
-        var ch = Math.floor(canvas.clientHeight);
-        canvas.width = cw;
-        canvas.height = ch;
-
-        draw(video,context,cw,ch);
-        video.play();
-
-        // video.addEventListener('play', function(){
-        //     draw(this,context,cw,ch);
-        //     //console.log("play event");
-        // },false);
-
-        // video.addEventListener('canplay', function(){
-        //     //console.log("play called")
-        //     video.play();
-        // },false);
+      function moveHexTrue() { 
+          if (!iconFrontend) {
+              checkHex.reverse(); 
+          }
+      }
+      function moveHexFalse() { 
+          if (iconFrontend) {
+              checkHex.play(0); 
+          }
       }
 
-      
+
+
+      //CLICK CATEGORIES AND SHIT
+      document.querySelector(".iconPairDesign").addEventListener(custom_event, function(e) {
+        if (iconDesign && !(iconMotion && iconFrontend) ) {
+          //only showing design, untoggle dat shit
+          raiseOpacity(".iconPair", ".projectModule");
+              moveSquareTrue();
+              moveCircleTrue();
+              moveHexTrue();
+              truify();
+        }
+        else { 
+          //all on, only show design
+          lowerOpacity(".iconPair");
+          crushOpacity(".projectModule");
+          raiseOpacity(".iconPairDesign", ".designProject");
+          moveSquareTrue();
+          moveCircleFalse();
+          moveHexFalse();
+          falsify("iconDesign");
+        }
+      });
+
+      document.querySelector(".iconPairMotion").addEventListener(custom_event, function(e) {
+        if (iconMotion && !iconDesign && !iconFrontend) {
+          //only showing motion, untoggle dat shit
+          raiseOpacity(".iconPair", ".projectModule");
+          moveSquareTrue();
+          moveCircleTrue();
+          moveHexTrue();
+          truify();
+        }
+        else { 
+          //all on, only show design
+          lowerOpacity(".iconPair");
+          crushOpacity(".projectModule");
+          raiseOpacity(".iconPairMotion", ".motionProject");
+          moveSquareFalse();
+          moveCircleTrue();
+          moveHexFalse();
+          falsify("iconMotion");
+        }
+      });
+
+      document.querySelector(".iconPairFrontend").addEventListener(custom_event, function(e) {
+        if (iconFrontend && !iconMotion && !iconDesign) {
+          //only showing frontend, untoggle dat shit
+          raiseOpacity(".iconPair", ".projectModule");
+          moveSquareTrue();
+          moveCircleTrue();
+          moveHexTrue();
+          truify();
+        }
+        else { 
+          //all on, only show design
+          lowerOpacity(".iconPair");
+          crushOpacity(".projectModule");
+          raiseOpacity(".iconPairFrontend", ".frontendProject");
+          moveSquareFalse();
+          moveCircleFalse();
+          moveHexTrue();
+          falsify("iconFrontend");
+        }
+      });
+
+      document.querySelector(".projectsHeaderToggle").addEventListener(custom_event, function(e) {
+        moveSquareTrue();
+        moveCircleTrue();
+        moveHexTrue();
+        truify();
+        raiseOpacity(".iconPair", ".projectModule");
+      });
+
+      function truify() {
+        iconDesign = true;
+        iconMotion = true;
+        iconFrontend = true;
+      }
+
+      function falsify(x) {
+        iconDesign = false;
+        iconMotion = false;
+        iconFrontend = false;
+        if (x=="iconDesign") {
+              iconDesign = true;
+          }
+        if (x=="iconMotion") {
+              iconMotion = true;
+          }
+        if (x=="iconFrontend") {
+              iconFrontend = true;
+          }
+      }
+
+      function raiseOpacity(x, y) {
+        Array.prototype.forEach.call(document.querySelectorAll(x), function(me) { 
+          me.style.opacity = "1"
+        });
+        Array.prototype.forEach.call(document.querySelectorAll(y), function(me) { 
+          me.style.opacity = "1"
+        });
+      }
+
+      function lowerOpacity(x) {
+        Array.prototype.forEach.call(document.querySelectorAll(x), function(me) { 
+          me.style.opacity = "0.7"
+        });
+      }
+
+      function crushOpacity(x) {
+        Array.prototype.forEach.call(document.querySelectorAll(x), function(me) { 
+          me.style.opacity = "0.1"
+        });
+      }
 
 
     }
@@ -169,7 +332,7 @@ Shape.prototype.animate = function(time, fps, context) {
 function buildPt() {
 
     //// 1. Define Space and Form
-    space = new CanvasSpace("demo", "#cccccc" ).display();
+    space = new CanvasSpace("demo", "#000000" ).display();
     form = new Form( space );
     form.stroke( false );
 

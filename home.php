@@ -7,7 +7,7 @@
 		<div class="projects-container-inner">
 
 			<div class="menuWrap">
-				<h4> Projects </h4>
+				<h4 class="projectsHeaderToggle"> Projects </h4>
 				<a href="/wordpress">
 					<h1>Blake Rutledge</h1>
 				</a>

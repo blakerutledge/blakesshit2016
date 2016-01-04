@@ -1,0 +1,77 @@
+.info-container {
+	max-width: 56em;
+	font-size: 0.8em;
+}
+
+.info-emphasis {
+	font-size: 2.2em;
+	line-height: 1.1em;
+	margin-bottom: 0.4em;
+}
+
+.info-more {
+	font-size: 1.4em;
+	line-height: 1.6em;
+	margin-bottom: 0.4em;
+}
+
+.info-nav {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info-button {
+	font-size: 0.98em;
+	text-align: center;
+	border: solid $br-black 1px;
+	border-radius: $borderRadius1;
+	width: 49%;
+}
+
+.info-link {
+	padding: 0.6em 0;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	display: block;
+	transition: color 0.2s linear, background-color 0.2s linear;
+	box-sizing: border-box;
+}
+
+.info-link:hover {
+	background-color: $br-black;
+	color: $br-white;
+}
+
+
+@media screen and (min-width: $breakpoint1) {
+	.info-container {
+		font-size: 0.9em;
+	}
+	.info-nav {
+		justify-content: flex-start;
+	}
+
+	.info-button {
+		width: initial;
+	}
+
+	.info-link {
+		padding: 0.6em 2.8em;
+	}
+
+	.info-button:first-child {
+		margin-right: 0.8em;
+	}
+}
+
+@media screen and (min-width: $breakpoint2) {
+	.info-container {
+		font-size: 1em;
+	}
+}

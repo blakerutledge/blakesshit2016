@@ -79,7 +79,7 @@ const build = () => {
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(sourcemaps.write('./maps', { addComment: false }))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload())

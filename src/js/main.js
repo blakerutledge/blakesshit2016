@@ -2,7 +2,7 @@
 import verge from "./libs/verge.js"
 import Clipboard from "./libs/clipboard.min.js"
 
-var space, form, center, viewPort, bot, lastTime, colorIndex, mouseSpeed, timeout, colors, pt, projectCanvas, cw, ch, context, post
+let space, form, center, viewPort, bot, lastTime, colorIndex, mouseSpeed, timeout, colors, pt, projectCanvas, cw, ch, context, post, homeScreenMode, projectScreenMode
 
 pt = document.querySelectorAll("#pt")
 projectCanvas = document.querySelectorAll(".teaser-dumpster")
@@ -12,10 +12,32 @@ lastTime = -5000
 colorIndex = 0
 mouseSpeed = 4000
 
+//Feature detect
+!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,i,s,a;for(var f in g)if(g.hasOwnProperty(f)){if(e=[],n=g[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)s=e[i],a=s.split("."),1===a.length?Modernizr[a[0]]=o:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=o),y.push((o?"":"no-")+a.join("-"))}}function i(e){var n=x.className,t=Modernizr._config.classPrefix||"";if(_&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),_?x.className.baseVal=n:x.className=n)}function s(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function a(e,n){return!!~(""+e).indexOf(n)}function f(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):_?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function l(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var o;for(var i in e)if(e[i]in n)return t===!1?e[i]:(o=n[e[i]],r(o,"function")?l(o,t||n):o);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(){var e=n.body;return e||(e=f(_?"svg":"body"),e.fake=!0),e}function c(e,t,r,o){var i,s,a,l,u="modernizr",d=f("div"),c=p();if(parseInt(r,10))for(;r--;)a=f("div"),a.id=o?o[r]:u+(r+1),d.appendChild(a);return i=f("style"),i.type="text/css",i.id="s"+u,(c.fake?c:d).appendChild(i),c.appendChild(d),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),d.id=u,c.fake&&(c.style.background="",c.style.overflow="hidden",l=x.style.overflow,x.style.overflow="hidden",x.appendChild(c)),s=t(d,e),c.fake?(c.parentNode.removeChild(c),x.style.overflow=l,x.offsetHeight):d.parentNode.removeChild(d),!!s}function m(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+d(n[o])+":"+r+")");return i=i.join(" or "),c("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function v(e,n,o,i){function l(){d&&(delete N.style,delete N.modElem)}if(i=r(i,"undefined")?!1:i,!r(o,"undefined")){var u=m(e,o);if(!r(u,"undefined"))return u}for(var d,p,c,v,h,y=["modernizr","tspan"];!N.style;)d=!0,N.modElem=f(y.shift()),N.style=N.modElem.style;for(c=e.length,p=0;c>p;p++)if(v=e[p],h=N.style[v],a(v,"-")&&(v=s(v)),N.style[v]!==t){if(i||r(o,"undefined"))return l(),"pfx"==n?v:!0;try{N.style[v]=o}catch(g){}if(N.style[v]!=h)return l(),"pfx"==n?v:!0}return l(),!1}function h(e,n,t,o,i){var s=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+S.join(s+" ")+s).split(" ");return r(n,"string")||r(n,"undefined")?v(a,n,o,i):(a=(e+" "+E.join(s+" ")+s).split(" "),u(a,n,t))}var y=[],g=[],C={_version:"3.2.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){g.push({name:e,fn:n,options:t})},addAsyncTest:function(e){g.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var x=n.documentElement,_="svg"===x.nodeName.toLowerCase(),w="Moz O ms Webkit",S=C._config.usePrefixes?w.split(" "):[];C._cssomPrefixes=S;var b=function(n){var r,o=prefixes.length,i=e.CSSRule;if("undefined"==typeof i)return t;if(!n)return!1;if(n=n.replace(/^@/,""),r=n.replace(/-/g,"_").toUpperCase()+"_RULE",r in i)return"@"+n;for(var s=0;o>s;s++){var a=prefixes[s],f=a.toUpperCase()+"_"+r;if(f in i)return"@-"+a.toLowerCase()+"-"+n}return!1};C.atRule=b;var E=C._config.usePrefixes?w.toLowerCase().split(" "):[];C._domPrefixes=E;var z={elem:f("modernizr")};Modernizr._q.push(function(){delete z.elem});var N={style:z.elem.style};Modernizr._q.unshift(function(){delete N.style}),C.testAllProps=h;var P=C.prefixed=function(e,n,t){return 0===e.indexOf("@")?b(e):(-1!=e.indexOf("-")&&(e=s(e)),n?h(e,n,t):h(e,"pfx"))};Modernizr.addTest("backgroundblendmode",P("backgroundBlendMode","text")),o(),i(y),delete C.addTest,delete C.addAsyncTest;for(var k=0;k<Modernizr._q.length;k++)Modernizr._q[k]();e.Modernizr=Modernizr}(window,document);
+let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)
+let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
+let isMobile = false;
+if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) isMobile = true;
+if( (isChrome || isSafari) && (Modernizr.backgroundblendmode) ){
+  console.log("Woo! Crazy blending modes for you.")
+  homeScreenMode = true
+  isMobile ? projectScreenMode=false : projectScreenMode = true
+} 
+else {
+  console.log("Woof. This site is cooler for other people.")
+  homeScreenMode = false
+  projectScreenMode = false
+}
+
+
+
 class Main {
   constructor(options = {}) {
-  
-    if ( pt.length !== 0 ) {
+    
+
+    if ( pt.length !== 0 && ( homeScreenMode ) ) {
+      document.querySelector('.screenLayer').style.mixBlendMode = "screen"
       console.log("Landing page")
       colors = ['#27AAE1', '#F57558', '#00C29E', '#82626D']
       buildPt()
@@ -38,49 +60,53 @@ class Main {
 
     if ( projectCanvas.length !== 0 ) {
       console.log("Projects page")
-      // - - - BACKGROUND VIDEO BUILD  - - - //
-      var canvasWrap = document.querySelector('.projects-teaser-container');
-      var objs = document.querySelectorAll(".projectModule")
-      var urls = {}
-      var pairs = {}
-      var dumpster = document.querySelector('.teaser-dumpster')
-      for (var i = 0; i < objs.length; i++) {
-        var temp = [].filter.call(objs[i].attributes, function(at) { return /^data-/.test(at.name) })
-        var string = "<video class='bg-video-trash bgScale' id='video-"+objs[i].id+"' src='" + temp[0].value + "' loop muted ></video>"
-        dumpster.innerHTML += string
-        pairs[ "video-"+objs[i].id ] = document.querySelector( "#video-"+objs[i].id )
-        //Add event listeners to hover
-        objs[i].addEventListener('mouseenter', function () {
-          document.querySelector("#video-"+this.id).style.opacity = "1"
-          document.querySelector("#video-"+this.id).play()
-        });
-        objs[i].addEventListener('mouseleave', function () {
-          document.querySelector("#video-"+this.id).style.opacity = "0"
-          document.querySelector("#video-"+this.id).pause()
-        });
-      }
-      resizeToCover()
-      window.addEventListener("resize", function() {
-        resizeToCover()
-      })
-      //Resize video container
-      function resizeToCover() {
-        // use largest scale factor of horizontal/vertical
-        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-        if ( w*0.5625 > h) {
-          //wider. trim height, set to width
-          Array.prototype.forEach.call(document.querySelectorAll('.bgScale'), function(video) { 
-            video.style.width = w+"px"
-            video.style.height = "auto"
-          })
+      if (projectScreenMode) {
+        console.log("Projects page screen mode true")
+        // - - - BACKGROUND VIDEO BUILD  - - - //
+        document.querySelector('.screenLayer').style.mixBlendMode = "screen"
+        var canvasWrap = document.querySelector('.projects-teaser-container')
+        var objs = document.querySelectorAll(".projectModule")
+        var urls = {}
+        var pairs = {}
+        var dumpster = document.querySelector('.teaser-dumpster')
+        for (var i = 0; i < objs.length; i++) {
+          var temp = [].filter.call(objs[i].attributes, function(at) { return /^data-/.test(at.name) })
+          var string = "<video class='bg-video-trash bgScale' id='video-"+objs[i].id+"' src='" + temp[0].value + "' loop muted ></video>"
+          dumpster.innerHTML += string
+          pairs[ "video-"+objs[i].id ] = document.querySelector( "#video-"+objs[i].id )
+          //Add event listeners to hover
+          objs[i].addEventListener('mouseenter', function () {
+            document.querySelector("#video-"+this.id).style.opacity = "1"
+            document.querySelector("#video-"+this.id).play()
+          });
+          objs[i].addEventListener('mouseleave', function () {
+            document.querySelector("#video-"+this.id).style.opacity = "0"
+            document.querySelector("#video-"+this.id).pause()
+          });
         }
-        else {
-          Array.prototype.forEach.call(document.querySelectorAll('.bgScale'), function(video) { 
-            video.style.height = h+"px"
-            video.style.width = "auto"
-          })
-        }    
+        resizeToCover()
+        window.addEventListener("resize", function() {
+          resizeToCover()
+        })
+        //Resize video container
+        function resizeToCover() {
+          // use largest scale factor of horizontal/vertical
+          var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+          var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+          if ( w*0.5625 > h) {
+            //wider. trim height, set to width
+            Array.prototype.forEach.call(document.querySelectorAll('.bgScale'), function(video) { 
+              video.style.width = w+"px"
+              video.style.height = "auto"
+            })
+          }
+          else {
+            Array.prototype.forEach.call(document.querySelectorAll('.bgScale'), function(video) { 
+              video.style.height = h+"px"
+              video.style.width = "auto"
+            })
+          }    
+        }
       }
       
       //Project Tag Selector Logic
@@ -274,10 +300,15 @@ class Main {
 
     if ( post.length !== 0 ) {
       console.log("Post page")
-      packPostGrid(8)
       window.addEventListener("resize", function() {
         packPostGrid(8)
       })
+      packPostGrid(8)
+      //Force safari to pack..
+      setTimeout(function(){
+        packPostGrid(8)
+      }, 10);
+      
     }
 
 
@@ -304,7 +335,10 @@ class Main {
         document.querySelector(".copied-alert").classList.remove("copied-alert-showing");
         e.clearSelection();
       }, 1000);
-    });     
+    });
+
+
+    //Force safari grid packing  
   }
 }
 

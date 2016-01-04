@@ -27,7 +27,7 @@ video {
 
 .screenLayer {
 	background-color: $br-white;
-	mix-blend-mode: screen;
+	// mix-blend-mode: screen;
 	min-height: 100vh;
 	position: relative;
 	transition: background-color .1s ease-in-out;

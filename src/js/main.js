@@ -2,10 +2,11 @@
 import verge from "./libs/verge.js"
 import Clipboard from "./libs/clipboard.min.js"
 
-var space, form, center, viewPort, bot, lastTime, colorIndex, mouseSpeed, timeout, colors, pt, projectCanvas, cw, ch, context
+var space, form, center, viewPort, bot, lastTime, colorIndex, mouseSpeed, timeout, colors, pt, projectCanvas, cw, ch, context, post
 
 pt = document.querySelectorAll("#pt")
 projectCanvas = document.querySelectorAll(".teaser-dumpster")
+post = document.querySelectorAll(".post-container")
 
 lastTime = -5000
 colorIndex = 0
@@ -37,7 +38,6 @@ class Main {
 
     if ( projectCanvas.length !== 0 ) {
       console.log("Projects page")
-
       // - - - BACKGROUND VIDEO BUILD  - - - //
       var canvasWrap = document.querySelector('.projects-teaser-container');
       var objs = document.querySelectorAll(".projectModule")
@@ -61,8 +61,8 @@ class Main {
       }
       resizeToCover()
       window.addEventListener("resize", function() {
-        resizeToCover();
-      });
+        resizeToCover()
+      })
       //Resize video container
       function resizeToCover() {
         // use largest scale factor of horizontal/vertical
@@ -269,7 +269,15 @@ class Main {
         });
       }
 
+      //end PROJECT specific
+    }
 
+    if ( post.length !== 0 ) {
+      console.log("Post page")
+      packPostGrid(8)
+      window.addEventListener("resize", function() {
+        packPostGrid(8)
+      })
     }
 
 
@@ -300,6 +308,55 @@ class Main {
   }
 }
 
+function packPostGrid(g) {
+    let gutter = g
+    //get consecutive grid-inline 
+    let all_inline = document.querySelectorAll(".grid-inline")
+    let inline_rows = []
+    let j = 0
+    let temp = []
+    let parentWidth = document.querySelector(".post-container").clientWidth
+    for ( let i = 0; i < all_inline.length; i++ ) {
+      if ( (all_inline[i].nextSibling != null) && hasClass( all_inline[i].nextSibling, "grid-inline" ) ) {
+        //Continue building inline group
+        temp.push( all_inline[i] )
+      }
+      else {
+        //Finish inline group
+        temp.push( all_inline[i] )
+        inline_rows[j] = temp
+        j++
+        temp = []
+      }
+    }
+    // resize inline, but keep ratio
+    if ( parentWidth < 520 ) {
+      //Too Skinny
+      for (let i = 0; i < inline_rows.length; i++ ) {
+        for (let j = 0; j < inline_rows[i].length; j ++) {
+          inline_rows[i][j].style.height = "auto"
+          inline_rows[i][j].style.width = "100%"
+        }
+      }
+    }
+    else {
+      //Fat enough!
+      for (let i = 0; i < inline_rows.length; i++ ) {
+        let gutters = (inline_rows[i].length - 1) * gutter
+        let width_ratio = 0
+        for (let j = 0; j < inline_rows[i].length; j ++) {
+          width_ratio += ( inline_rows[i][j].naturalWidth / inline_rows[i][j].naturalHeight )
+        }
+        let target_height = (parentWidth - gutters) / ( width_ratio )
+        for (let j = 0; j < inline_rows[i].length; j ++) {
+          inline_rows[i][j].style.height = Math.floor(target_height)+"px"
+          inline_rows[i][j].style.width = "auto"
+        }
+      }
+    }
+}
+
+
 // A Shape is a kind of Vector
 function Shape() {
   Vector.apply( this, arguments ); // call Vector's constructor
@@ -327,6 +384,9 @@ Shape.prototype.animate = function(time, fps, context) {
 
 }
 
+function hasClass(el, className) {
+    return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);
+}
 
 
 function buildPt() {

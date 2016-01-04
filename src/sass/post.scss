@@ -1,4 +1,4 @@
-$gutter: 0.3em;
+$gutter: 8px;
 
 .post-back-wrap-inner {
 	display: flex;
@@ -87,9 +87,13 @@ article {
 
 	.grid-inline {
 		display: inline-block;
-		height: auto;
+		height: 0px;
 		width: auto;
 		margin-bottom: $gutter;
+		margin-right: $gutter;
+	}
+	.grid-inline:last-child {
+		margin-right: 0px;
 	}
 
 	.grid-full {

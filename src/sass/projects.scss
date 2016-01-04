@@ -1,6 +1,6 @@
 .projects-container {
 	// @extend .home-container-inner;
-	padding: 30px 12px;
+	padding: 12px 12px;
 	border-top: 12px solid $br-black;
 	border-bottom: 12px solid $br-black;
 	min-height: 100vh;
@@ -88,7 +88,7 @@
 
 	.projectModule{
 		cursor: pointer;
-		transition: padding-left 0.8s cubic-bezier(0, 0.78, 0.1, 1), opacity 0.2s linear;
+		transition: opacity 0.2s linear, background-color 0.05s linear, color 0.05s linear;
 		color: $br-white;
 		width: 100%;
 		margin-bottom: 0.4em;
@@ -102,17 +102,21 @@
 		flex-direction: row;
 		flex-wrap: no-wrap;
 		justify-content: flex-start;
+		background-size: cover;
+    	background-position: 50% 50%;
 
 		h3 {
 			font-size: 1.24em;
 			letter-spacing: 0.06em;
 			font-weight: 700;
+			transition: transform 0.25s cubic-bezier(0.2, 1, 0.3, 1);
 		}
 
 		.moduleDeetsGroup{
 			display: flex;
 			justify-content: center;
 			margin-left: .4em;
+			transition: transform 0.25s cubic-bezier(0.2, 1, 0.3, 1);
 
 			h5 {
 				display: inline-block;
@@ -132,18 +136,20 @@
 				height: 1em;
 				font-size: 1em;
 				margin-right: .4em;
+				fill: $br-white;
+				transition: fill 0.05s linear;
 			}
 
 			.projectModuleIconDesign{
-				background-image: url("../dist/images//icon-blank-black-design.svg");
+				// background-image: url("../dist/images//icon-blank-black-design.svg");
 			}
 			
 			.projectModuleIconMotion{
-				background-image: url("../dist/images//icon-blank-black-motion.svg");
+				// background-image: url("../dist/images//icon-blank-black-motion.svg");
 			}
 
 			.projectModuleIconFrontend{
-				background-image: url("../dist/images//icon-blank-black-frontend.svg");
+				// background-image: url("../dist/images//icon-blank-black-frontend.svg");
 				margin-right: 0
 			}
 
@@ -160,30 +166,23 @@
 	.projectModule:hover{
 		background-color: $br-white;
 		color: $br-black;
-		padding-left: 1em;
+		// padding-left: 1em;
+		background-image: none !important;
 
 		.whiteLinkly{
 			@extend .blackLinkly;
+			transform: translateX(35px); 
 		}
 
 		.moduleDeetsGroup{
+			transform: translateX(35px);
 
 			h5 {
 				color: $br-black;
 			}
 				
-			.projectModuleIcons{
-				.projectModuleIconDesign{
-					background-image: url("../dist/images//icon-blank-black-design.svg");
-				}
-				
-				.projectModuleIconMotion{
-					background-image: url("../dist/images//icon-blank-black-motion.svg");
-				}
-
-				.projectModuleIconFrontend{
-					background-image: url("../dist/images//icon-blank-black-frontend.svg");
-				}
+			.projectModuleIcon{
+				fill: $br-black;
 			}
 		}
 	}
@@ -192,7 +191,7 @@
 @media screen and (min-width: $breakpoint1) {
 	
 	.projects-container {
-		padding: 55px 24px;
+		padding: 24px 24px;
 		border-top: 18px solid $br-black;
 		border-bottom: 18px solid $br-black;
 	}
@@ -256,22 +255,22 @@
 					font-size: 0.78em;
 
 					.projectModuleIconDesign {
-						background-image: url("../dist/images//icon-blank-white-design.svg");
+						// background-image: url("../dist/images//icon-blank-white-design.svg");
 					}
 
 					.projectModuleIconMotion {
-						background-image: url("../dist/images//icon-blank-white-motion.svg");
+						// background-image: url("../dist/images//icon-blank-white-motion.svg");
 					}
 
 					.projectModuleIconFrontend {
-						background-image: url("../dist/images//icon-blank-white-frontend.svg");
+						// background-image: url("../dist/images//icon-blank-white-frontend.svg");
 					}
 				}
 			}
 		}
 
 		.projectModule:hover {
-			padding-left: 3em;
+			// padding-left: 3em;
 		}
 	}
 }
@@ -279,7 +278,7 @@
 @media screen and (min-width: $breakpoint2) {
 
 	.projects-container {
-		padding: 80px 36px;
+		padding: 36px 36px;
 		border-top: 24px solid $br-black;
 		border-bottom: 24px solid $br-black;
 	}

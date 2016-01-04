@@ -61,7 +61,6 @@ class Main {
     if ( projectCanvas.length !== 0 ) {
       console.log("Projects page")
       if (projectScreenMode) {
-        console.log("Projects page screen mode true")
         // - - - BACKGROUND VIDEO BUILD  - - - //
         document.querySelector('.screenLayer').style.mixBlendMode = "screen"
         var canvasWrap = document.querySelector('.projects-teaser-container')
@@ -106,6 +105,20 @@ class Main {
               video.style.width = "auto"
             })
           }    
+        }
+      }
+      else {
+        //No video && blend-mode support, give em the static shit
+        console.log("givin em the static shit")
+        var objs = document.querySelectorAll(".projectModule")
+        var urls = {}
+        var dumpster = document.querySelector('.teaser-dumpster')
+        for (var i = 0; i < objs.length; i++) {
+          var temp = [].filter.call(objs[i].attributes, function(at) { return /^data-static/.test(at.name) })
+          if ( temp[0].value !== "" ) {
+            objs[i].style.backgroundImage = "url('"+temp[0].value+"')"
+            // console.log(temp[0].value)
+          }
         }
       }
       
@@ -310,9 +323,7 @@ class Main {
       }, 10);
       
     }
-
-
-
+    /*
 
     var clipboard = new Clipboard('#footer-email-link');
   
@@ -336,8 +347,7 @@ class Main {
         e.clearSelection();
       }, 1000);
     });
-
-
+    */
     //Force safari grid packing  
   }
 }
@@ -426,7 +436,7 @@ function hasClass(el, className) {
 function buildPt() {
 
     //// 1. Define Space and Form
-    space = new CanvasSpace("demo", "#000000" ).display();
+    space = new CanvasSpace("demo", "#cccccc" ).display();
     form = new Form( space );
     form.stroke( false );
 

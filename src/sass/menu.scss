@@ -5,26 +5,16 @@
 	flex-wrap: nowrap;
 	align-items: baseline;
 	justify-content: flex-start;
-	color: $br-black;
 	font-size: 5.4vw;
 
 	h1, h4 {
 		margin-top: 0;
 		margin-bottom: 0em;
-		// font-size: 1em;
 	}
 
 	h4 {
 		font-weight: 700;
 		text-transform: uppercase;
-	}
-
-	.blackLinklyBack {
-		color: $br-black;
-	}
-
-	a {
-		color: $br-black;
 	}
 		
 }
@@ -44,7 +34,4 @@
 		justify-content: space-between;
 		align-items: baseline;
 	}
-
-
-
 }

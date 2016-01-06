@@ -436,7 +436,7 @@ function hasClass(el, className) {
 function buildPt() {
 
     //// 1. Define Space and Form
-    space = new CanvasSpace("demo", "#cccccc" ).display();
+    space = new CanvasSpace("demo", "#595959" ).display();
     form = new Form( space );
     form.stroke( false );
 

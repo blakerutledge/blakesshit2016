@@ -1,10 +1,9 @@
 .projects-container {
-	// @extend .home-container-inner;
-	padding: 12px 12px;
+	padding: 24px 12px;
+	padding-bottom: 0;
 	border-top: 12px solid $br-black;
 	border-bottom: 12px solid $br-black;
 	min-height: 100vh;
-
 }
 
 .projectsHeaderToggle{
@@ -18,6 +17,7 @@
 
 .projects-footer-container {
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .projectsWrap{
@@ -192,13 +192,15 @@
 	
 	.projects-container {
 		padding: 24px 24px;
+		padding-bottom: 0;
 		border-top: 18px solid $br-black;
 		border-bottom: 18px solid $br-black;
 	}
 
 
 	.projects-footer-container {
-		margin-top: 55px;
+		margin-top: 40px;
+		margin-bottom: 40px;
 	}
 
 	.projectLinkWrap {
@@ -279,13 +281,15 @@
 
 	.projects-container {
 		padding: 36px 36px;
+		padding-bottom: 0;
 		border-top: 24px solid $br-black;
 		border-bottom: 24px solid $br-black;
 	}
 
 
 	.projects-footer-container {
-		margin-top: 80px;
+		margin-top: 50px;
+		margin-bottom: 50px;
 	}
 
 	.projectLinkWrap {

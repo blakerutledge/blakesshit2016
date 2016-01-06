@@ -15,11 +15,11 @@ Template Name: Info
 
 <div class="screenLayer" id="screenLayerID">
 	<div class="home-container">
-		<div class="home-container-inner">
+		<div class="home-container-inner info-container-inner">
 
 			<div class="menuWrap">
 				<h4> Info </h4>
-				<a href="/wordpress">
+				<a href="<?php echo get_site_url()?>">
 					<h1>Blake Rutledge</h1>
 				</a>
 			</div>
@@ -31,7 +31,7 @@ Template Name: Info
 				</div>
 				<div class="info-nav">
 					<div class="info-button">
-						<a href="http://localhost:8888/wordpress/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
+						<a href="<? echo get_site_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
 							Resume
 						</a>
 					</div>

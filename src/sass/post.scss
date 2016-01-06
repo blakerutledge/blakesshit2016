@@ -1,5 +1,11 @@
 $gutter: 8px;
 
+.post-container-outer {
+	@extend .projects-container;
+	border-color: $br-grey;
+	color: $br-grey;
+}
+
 .post-back-wrap-inner {
 	display: flex;
 	flex-direction: row;
@@ -12,12 +18,25 @@ $gutter: 8px;
 	h4 {
 		margin-right: 0.2em;
 		margin-left: 0.2em;
+		color: $br-grey;
+	}
+	.post-back-arrow {
+		fill: $br-grey;
 	}
 }
 
 .post-back-arrow {
 	width: .42em;
 	transition: opacity .1s linear, transform 1.4s cubic-bezier(0, 0.96, 0.13, 1.01);
+}
+
+.post-footer-container {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.post-footer-container svg {
+	fill: $br-grey;
 }
 
 .post-back-arrow-1 {
@@ -79,9 +98,6 @@ article {
 
 	// - - - Grid - - - //
 	p {
-		// display: flex;
-		// flex-direction: row;
-		// justify-content: stretch;
 		line-height: 0;
 	}
 
@@ -111,7 +127,7 @@ article {
 		font-weight: 700;
 		font-size: 1.5em;
 		text-transform: uppercase;
-		margin-top: 40px;
+		margin-top: 30px;
 		letter-spacing: 0.08em;
 	}
 
@@ -124,7 +140,7 @@ article {
 		font-size: 1.1em;
 		font-weight: 300;
 		margin-top: 0.2em;
-		margin-bottom: 40px;
+		margin-bottom: 30px;
 		line-height: 1.6em;
 
 
@@ -140,11 +156,12 @@ article {
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	border-top: 2px solid $br-black;
-	border-bottom: 2px solid $br-black;
+	border-top: 2px solid $br-grey;
+	border-bottom: 2px solid $br-grey;
 	margin-top: 80px;
 	font-size : 1.15em;
 	font-weight: 700;
+	color: $br-grey;
 }
 
 .bottom-nav-back {
@@ -171,7 +188,7 @@ article {
 .bottom-nav-spacer {
 	width: 0%;
 	height: 4em;
-	border-right: 2px solid $br-black;
+	border-right: 2px solid $br-grey;
 	box-sizing: border-box;
 }
 
@@ -196,6 +213,10 @@ article {
 		margin-left: 0.3em;
 		margin-right: 0.3em;
 	}
+}
+
+.bottom-back-arrow, .bottom-next-arrow {
+	fill: $br-grey;
 }
 
 .bottom-back-arrow {
@@ -262,6 +283,7 @@ article {
 
 }
 
+
 @media screen and (min-width: $breakpoint1) {
 	article h1 {
 		font-size: 2.2em;
@@ -272,6 +294,21 @@ article {
 	}
 	.bottom-nav-container {
 		font-size : 1.3em;
+	}
+	.post-footer-container {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.entry-content {
+		h3 {
+			font-size: 1.62em;
+			margin-top: 45px;
+		}
+		h6 {
+			font-size: 1.15em;
+			margin-top: 0.2em;
+			margin-bottom: 45px;
+		}
 	}
 
 }
@@ -286,4 +323,19 @@ article {
 	.bottom-nav-container {
 		font-size : 1.5em;
 	}	
+	.post-footer-container {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.entry-content {
+		h3 {
+			font-size: 1.75em;
+			margin-top: 55px;
+		}
+		h6 {
+			font-size: 1.28em;
+			margin-top: 0.35em;
+			margin-bottom: 55px;
+		}
+	}
 }

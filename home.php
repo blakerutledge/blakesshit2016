@@ -8,7 +8,7 @@
 
 			<div class="menuWrap">
 				<h4 class="projectsHeaderToggle"> Projects </h4>
-				<a href="/wordpress">
+				<a href="<? echo get_site_url(); ?>">
 					<h1>Blake Rutledge</h1>
 				</a>
 			</div>

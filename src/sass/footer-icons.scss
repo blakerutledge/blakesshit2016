@@ -1,14 +1,12 @@
 .footer-icons-wrap {
 	font-size: 0.9em;
+	// display: inline-block;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	// position: relative;
-	// display: inline-block;
-	// text-align: center;
-
 }
 
 .footer-icon-pair {
@@ -16,7 +14,7 @@
 	transition: opacity .15s ease-in-out;
 	display: inline-block;
 	vertical-align: middle;
-	flex-grow: 1;
+	// flex-grow: 1;
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 	padding-top: 0.75em;
@@ -29,6 +27,12 @@
 	padding-left: 0;
 }
 
+.footer-email {
+	font-size: 1.25em;
+	padding-left: 0.3em;
+	// display: inline-block;
+}
+
 .footer-icon-pair-inner {
 	display: flex;
 	flex-direction: row;
@@ -39,6 +43,7 @@
 }
 
 .footer-icon {
+	font-size: 0.8em;
 	width: 2.4em;	
 	height: 2.4em;
 	border-radius: 50%;
@@ -67,7 +72,6 @@
 
 .footer-icon-email {
 	display: none;
-
 }
 
 .footer-label-email {
@@ -106,6 +110,7 @@
 		font-size: 0.8em;
 	}
 }
+
 .copied-alert-triangle {
 	font-size: 1.05em;
 	position: absolute;
@@ -133,19 +138,26 @@
 
 
 @media screen and (min-width: $breakpoint1) {
+	.footer-email {
+		font-size: 1.3em;
+	}
+	.footer-icon {
+		font-size: 1.1em;
+	}
 	.footer-icon {
 		width: 1.8em;	
 		height: 1.8em;
 	}
 	.footer-icons-wrap {
-    	position: relative;
-		display: inline-block;
+    	// justify-content: flex-start;
 	}
 	.footer-icon-pair {
 		padding-bottom: 0;
 		padding-top: 0;
 	}
-	.footer-icon-email {
+
+
+	/* .footer-icon-email {
 		display: initial;
 	}
 	.footer-icon-pair-email {
@@ -154,7 +166,9 @@
 	.footer-label-email {
 		width: 0em;
 		transform: translateX(-.5em);
-	}
+	} */
+
+
 	.footer-icons-wrap {
 		font-size: .88em;
 	}
@@ -202,10 +216,10 @@
 		padding-right: 0.8em;
 	}
 	.footer-icons-wrap {
-		font-size: .92em;
+		font-size: .88em;
 	}
 	.footer-label {
-		font-size: 1.12em;
+		font-size: 1.2em;
 	}
 
 }

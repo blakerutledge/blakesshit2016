@@ -34,7 +34,11 @@
 	text-align: center;
 	border: solid $br-black 1px;
 	border-radius: $borderRadius1;
-	width: 49%;
+	width: 60%;
+}
+
+.info-button-resume {
+	border-color: $br-white;
 }
 
 .info-link {

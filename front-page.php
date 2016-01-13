@@ -9,7 +9,7 @@
 
 <div class="screenLayer" id="screenLayerID">
 	<div class="home-container">
-		<div class="home-container-inner">
+		<div class="home-container-inner info-container-inner">
 
 			<div class="home-name-wrap">
 				<div class="home-skills">
@@ -33,16 +33,23 @@
 				</div>
 			</div>
 
-			<div class="home-work-wrap">
-				<a class="home-work-anchor" href='<? echo get_site_url(); ?>/projects'>
-					<div class="home-work-wrap-inner">
-						<svg class="home-work-arrow home-work-arrow-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><path class="home-work-arrow-path" fill="#000000" d="M6.22 21.19l-2.43-3.17 9.2-7.05L3.7 4.01 6.1.81l11.4 8.53c.5.38.8.96.8 1.59 0 .63-.29 1.22-.78 1.6l-11.3 8.66z"/></svg>
-						<div class='home-work'>
+			<div class="projectsWrap">
+				<div class="info-container">
+					<p class="info-emphasis">I am Brooklyn-based full-stack designer.</p>
+					<p class="info-more">Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				</div>
+				<div class="info-nav">
+					<div class="info-button">
+						<a href="projects" class="info-link info-link-projects">
 							Projects
-						</div>
-						<svg class="home-work-arrow home-work-arrow-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><path fill="#000000" d="M6.22 21.19l-2.43-3.17 9.2-7.05L3.7 4.01 6.1.81l11.4 8.53c.5.38.8.96.8 1.59 0 .63-.29 1.22-.78 1.6l-11.3 8.66z"/></svg>
+						</a>
 					</div>
-				</a>
+					<!--<div class="info-button info-button-resume">
+						<a href="<? echo get_site_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
+							Resume
+						</a>
+					</div>-->
+				</div>
 			</div>
 
 			<div class="home-footer-wrap">

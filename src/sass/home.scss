@@ -51,6 +51,10 @@
 	display: block;
 }
 
+.projectsWrap {
+	margin-bottom: 1em;
+}
+
 .home-work-wrap {
 	font-size: 11vw;
 	font-weight: 700;
@@ -138,6 +142,9 @@
 }
 
 @media screen and (min-width: $breakpoint1) {
+	.projectsWrap {
+		margin-bottom: 0;
+	}
 	.home-container {
 		border: 18px solid $br-black;
 	}

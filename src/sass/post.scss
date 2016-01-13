@@ -118,6 +118,12 @@ article {
 		display: block;
 		margin-bottom: $gutter;
 	}
+}
+
+.post-copy-block {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 0.8em;
 
 	h3 {
 		display: block;
@@ -125,26 +131,49 @@ article {
 		margin-left: auto;
 		margin-right: auto;
 		font-weight: 700;
-		font-size: 1.5em;
+		font-size: 1.728em;
 		text-transform: uppercase;
-		margin-top: 30px;
 		letter-spacing: 0.08em;
+		margin-bottom: 0.2em;
+		line-height: 1.4em;
 	}
 
-	h6 {
+	p {
+		opacity: 0.8;
 		display: block;
 		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
 		font-weight: 700;
-		font-size: 1.1em;
+		font-size: 1.2em;
 		font-weight: 300;
 		margin-top: 0.2em;
-		margin-bottom: 30px;
-		line-height: 1.6em;
-
-
+		margin-bottom: 0.6em;
+		line-height: 1.4em;
 	}
+
+	.post-copy-big {
+		opacity: 1;
+		display: block;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: 700;
+		font-size: 1.44em;
+		font-weight: 300;
+		margin-top: 0.2em;
+		line-height: 1.4em;
+		font-style: italic;
+	}
+
+	.post-copy-center {
+		text-align: center;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
 
 }
 
@@ -158,10 +187,14 @@ article {
 	align-items: center;
 	border-top: 2px solid $br-grey;
 	border-bottom: 2px solid $br-grey;
-	margin-top: 80px;
+	margin-top: 20px;
 	font-size : 1.15em;
 	font-weight: 700;
 	color: $br-grey;
+
+    // max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bottom-nav-back {
@@ -296,18 +329,22 @@ article {
 		font-size : 1.3em;
 	}
 	.post-footer-container {
-		margin-top: 40px;
-		margin-bottom: 40px;
+		margin-top: 50px;
+		margin-bottom: 50px;
 	}
-	.entry-content {
+	.post-copy-block {
+		font-size: 0.9em;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
 		h3 {
-			font-size: 1.62em;
-			margin-top: 45px;
+			
 		}
-		h6 {
-			font-size: 1.15em;
-			margin-top: 0.2em;
-			margin-bottom: 45px;
+		p {
+		
+		}
+		.post-copy-big {
+		
 		}
 	}
 
@@ -327,15 +364,21 @@ article {
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
-	.entry-content {
+
+	.post-copy-block {
+		font-size: 1.0em;
+		padding-top: 70px;
+		padding-bottom: 70px;
+
 		h3 {
-			font-size: 1.75em;
-			margin-top: 55px;
+			
 		}
-		h6 {
-			font-size: 1.28em;
-			margin-top: 0.35em;
-			margin-bottom: 55px;
+		p {
+		
+		}
+		.post-copy-big {
+		
 		}
 	}
+
 }

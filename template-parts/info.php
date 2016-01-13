@@ -17,11 +17,26 @@ Template Name: Info
 	<div class="home-container">
 		<div class="home-container-inner info-container-inner">
 
-			<div class="menuWrap">
-				<h4> Info </h4>
-				<a href="<?php echo get_site_url()?>">
+			<div class="home-name-wrap">
+				<div class="home-skills">
+					<span class="home-skill">
+						Design
+					</span>
+					<span class="home-add">+</span>
+					<span class="home-skill">
+						Motion
+					</span>
+					<span>+</span>
+					<span class="home-skill">
+						Frontend
+					</span>
+					<span class="home-portfolio">
+						Portfolio
+					</span>
+				</div>
+				<div class="home-name">
 					<h1>Blake Rutledge</h1>
-				</a>
+				</div>
 			</div>
 
 			<div class="projectsWrap">

@@ -11,14 +11,16 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/archive.php": {
-		"fileType": 8192,
+	"\/bundle.js": {
+		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/archive.php",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/bundle.js",
+		"outputAbbreviatedPath": "\/min\/bundle-min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/dist\/bundle.js": {
 		"fileType": 64,
@@ -68,6 +70,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dist\/libs\/TweenMax.min.js",
 		"outputAbbreviatedPath": "\/dist\/libs\/min\/TweenMax.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/dist\/min\/bundle-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/min\/bundle-min.js",
+		"outputAbbreviatedPath": "\/dist\/min\/min\/bundle-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -485,6 +498,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/src\/sass\/info.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/sass\/info.scss",
+		"outputAbbreviatedPath": "\/src\/css\/info.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
 	"\/src\/sass\/menu.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -565,6 +594,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/style.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/template-parts\/color-home.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -588,15 +626,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/template-parts\/content-page.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/template-parts\/content-search.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/template-parts\/content-search.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -628,6 +657,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/template-parts\/info.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-parts\/info.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/template-parts\/post.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -651,15 +689,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/template-parts\/projectsList.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/template-parts\/refs.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/template-parts\/refs.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

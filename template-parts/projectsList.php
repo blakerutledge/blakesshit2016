@@ -8,7 +8,9 @@
 				if ( in_category( 'frontend' ) ) : echo "frontendProject "; endif;
 				?>" id="<?php echo $post->post_name; ?>" data-teaser="<?php $key="data-teaser"; $attr = get_post_meta($post->ID, $key, true); echo "" . $attr; ?>" 
 				data-static="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', false )[0] ?>">
-				<h3 class='linkly whiteLinkly'><?php the_title(); ?></h3>
+				<div class="linklyWrap">
+					<h3 class='linkly whiteLinkly'><?php the_title(); ?></h3>
+				</div>
 				<div class='moduleDeetsGroup'>
 					<h5> <?php the_time('m'); ?> &nbsp;&vert;&nbsp;  <?php the_time('Y'); ?></h5>
 					<div class='projectModuleIcons'>

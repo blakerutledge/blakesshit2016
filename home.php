@@ -8,7 +8,8 @@
 
 			<div class="menuWrap">
 				<h4 class="projectsHeaderToggle"> Projects </h4>
-				<a href="<? echo get_site_url(); ?>">
+				<a href="<? echo get_site_url(); ?>" class="menu-wrap-name-inner">
+					<div class="name-line-hover"></div>
 					<h1>Blake Rutledge</h1>
 				</a>
 			</div>

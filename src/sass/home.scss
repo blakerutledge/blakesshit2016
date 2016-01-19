@@ -25,7 +25,7 @@
 	justify-content: space-between;
 	width: 100%;
 	text-align: left;
-	font-size: 5.4vw;
+	font-size: 4.4vw;
 	color: $br-black;
 	transition: color .1s ease-in-out;
 }
@@ -35,7 +35,7 @@
 }
 
 .home-skills {
-
+	font-size: 1.2em;
 }
 
 .home-skill {
@@ -185,8 +185,8 @@
 		font-size: 1.7em;
 	}
 	.home-name-wrap {
-		flex-direction: row;
-		flex-wrap: nowrap;
+		// flex-direction: row;
+		// flex-wrap: nowrap;
 	}
 	.home-work-wrap {
 		font-size: 6.6em;

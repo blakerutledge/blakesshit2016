@@ -35,15 +35,15 @@
 
 			<div class="projectsWrap">
 				<div class="info-container">
-					<p class="info-emphasis">I am Brooklyn-based full-stack designer.</p>
-					<p class="info-more">Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p class="info-emphasis">I am a Brooklyn-based interactive & motion designer.</p>
+					<p class="info-more">I work at Ogilvy & Mather as an Artist in Residence, and make time for freelance. Here's <a target="_blank" href="<? echo get_site_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf">my resume,</a> and if you'd like to get in touch, send me <a class="info-email-fakeout" >an email,</a> I read that shit.</p>
 				</div>
 				<div class="info-nav">
-					<div class="info-button">
-						<a href="projects" class="info-link info-link-projects">
+					<a href="projects" class="info-button">
+						<div class="info-link info-link-projects">
 							Projects
-						</a>
-					</div>
+						</div>
+					</a>
 					<!--<div class="info-button info-button-resume">
 						<a href="<? echo get_site_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
 							Resume

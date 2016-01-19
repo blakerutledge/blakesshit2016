@@ -5,7 +5,14 @@ body {
 	text-size-adjust: none;
 	text-size-adjust: 100%;
 	font-size: 1.5rem;
+
 }
+
+::selection {
+	background: $br-orange;	
+	color: $br-white;	
+}
+
 
 div {
 	box-sizing: border-box;

@@ -39,6 +39,11 @@ class Main {
     if ( pt.length !== 0 && ( homeScreenMode ) ) {
       document.querySelector('.screenLayer').style.mixBlendMode = "screen"
       console.log("Landing page")
+
+      document.querySelector('.info-email-fakeout').addEventListener('click', function(e) {
+        SelectText(document.querySelector('.footer-email'));
+      });
+      
       colors = ['#27AAE1', '#F57558', '#00C29E', '#82626D']
       buildPt()
       window.addEventListener('resize', function(event){
@@ -127,7 +132,8 @@ class Main {
       var iconMotion = true;
       var iconFrontend = true;
 
-      var custom_event = "click";
+      var custom_event = "mouseenter";
+      var custom_event2 = "mouseleave";
 
       var hexInner = "15.41,3.36 19.82,11 15.41,18.64 6.59,18.64 2.18,11 6.59,3.36 15.41,3.36"
       var circleInner = "M11,3.26c4.27,0,7.74,3.47,7.74,7.74s-3.47,7.74-7.74,7.74S3.26,15.27,3.26,11S6.73,3.26,11,3.26";
@@ -266,6 +272,14 @@ class Main {
         raiseOpacity(".iconPair", ".projectModule");
       });
 
+      document.querySelector(".projectsIconWrap").addEventListener(custom_event2, function(e) {
+        moveSquareTrue();
+        moveCircleTrue();
+        moveHexTrue();
+        truify();
+        raiseOpacity(".iconPair", ".projectModule");
+      });
+
       function truify() {
         iconDesign = true;
         iconMotion = true;
@@ -323,6 +337,10 @@ class Main {
       }, 10);
       
     }
+    document.querySelector('.footer-email').addEventListener('click', function(e) {
+      SelectText(this);
+    });
+
     /*
 
     var clipboard = new Clipboard('#footer-email-link');
@@ -397,6 +415,24 @@ function packPostGrid(g) {
           inline_rows[i][j].style.width = "auto"
         }
       }
+    }
+}
+
+function SelectText(element) {
+    var doc = document
+        , text = element
+        , range, selection
+    ;    
+    if (doc.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) {
+        selection = window.getSelection();        
+        range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
     }
 }
 

@@ -8,7 +8,7 @@
 }
 
 .info-emphasis {
-	font-size: 2.2em;
+	font-size: 1.95em;
 	line-height: 1.1em;
 	margin-bottom: 0.4em;
 }
@@ -17,6 +17,53 @@
 	font-size: 1.4em;
 	line-height: 1.6em;
 	margin-bottom: 0.4em;
+
+	a {
+		display: inline-block;
+		position: relative;
+		color: $br-white;
+		font-size: 0.95em;
+		// border-bottom: 2px solid rgba(255,255,255,0);
+		// border-color: rgba(255,255,255,0);
+		transition: all 0.05s ease-in-out;
+		padding: 0 0.15em;
+		cursor: pointer;
+		line-height: 1.4em;
+		// -webkit-text-stroke: 0.02em $br-white;
+		// text-shadow: 1px 1px 0 $br-black, -1px 1px 0 $br-black, 0px 1px 0 $br-black;
+		background-color: rgba(0,0,0,0.5);
+		// outline: 12px solid $br-white;
+		// outline-offset: 2px;
+		border-radius: $borderRadius1;
+
+		&:hover {
+
+		}
+	}
+
+	a::after {
+		position: absolute;
+		content: "";
+		bottom: 0.2em;
+		left: 0.15em;
+		width: 0px;
+		height: 1px;
+		background: $br-white;
+		// z-index: -1;
+		// transform: translateY(100%) translateY(-5px);
+		transition: all 0.14s cubic-bezier(0.05, 0.81, 0.36, 0.9);
+
+	}
+
+	a:hover {
+		// padding-bottom: 0.05em;
+		background-color: rgba(0,0,0,1);
+
+		&::after {	
+			width: 91%;
+			width: calc(100% - 0.3em);
+		}
+	}
 }
 
 .info-nav {
@@ -30,11 +77,14 @@
 }
 
 .info-button {
-	font-size: 0.98em;
+	font-size: 1.22em;
 	text-align: center;
 	border: solid $br-black 1px;
 	border-radius: $borderRadius1;
-	width: 60%;
+	padding: 0.7em 5em;
+	margin-left: auto;
+	margin-right: auto;
+	transition: color 0.2s linear, background-color 0.2s linear;
 }
 
 .info-button-resume {
@@ -42,18 +92,35 @@
 }
 
 .info-link {
-	padding: 0.6em 0;
 	font-weight: 600;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	display: block;
-	transition: color 0.2s linear, background-color 0.2s linear;
 	box-sizing: border-box;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: -2px;
+		left: 0;
+		width: 0px;
+		height: 2px;
+		background: $br-white;
+		// transform: translateY(100%) translateY(-5px);
+		transition: width 0.2s cubic-bezier(0.3, 0.01, 0.05, 0.9);
+	}
 }
 
-.info-link:hover {
+.info-button:hover {
 	background-color: $br-black;
 	color: $br-white;
+
+	.info-link {
+		&::after {
+			width: 100%;
+		}
+	}
 }
 
 
@@ -69,8 +136,10 @@
 		width: initial;
 	}
 
-	.info-link {
-		padding: 0.6em 2.8em;
+	.info-button {
+		padding: 0.95em 6em;
+		margin-left: initial;
+		margin-right: initial;
 	}
 
 	.info-button:first-child {

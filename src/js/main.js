@@ -27,6 +27,9 @@ if( (isChrome || isSafari) && (Modernizr.backgroundblendmode) ){
 else {
   console.log("Woof. This site is cooler for other people.")
   homeScreenMode = false
+  if (isMobile) {
+    homeScreenMode = true
+  }
   projectScreenMode = false
 }
 

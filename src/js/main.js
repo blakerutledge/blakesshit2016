@@ -68,8 +68,10 @@ class Main {
 
     if ( projectCanvas.length !== 0 ) {
       console.log("Projects page")
+
+      //- - - - BEGIN PROJECT SCREEN MODE - - - - //
       if (projectScreenMode) {
-        // - - - BACKGROUND VIDEO BUILD  - - - //
+        //Background video build
         document.querySelector('.screenLayer').style.mixBlendMode = "screen"
         var canvasWrap = document.querySelector('.projects-teaser-container')
         var objs = document.querySelectorAll(".projectModule")
@@ -114,7 +116,7 @@ class Main {
             })
           }    
         }
-      }
+      } //- - - - END PROJECT SCREEN MODE - - - - //
       else {
         //No video && blend-mode support, give em the static shit
         console.log("givin em the static shit")
@@ -125,7 +127,6 @@ class Main {
           var temp = [].filter.call(objs[i].attributes, function(at) { return /^data-static/.test(at.name) })
           if ( temp[0].value !== "" ) {
             objs[i].style.backgroundImage = "url('"+temp[0].value+"')"
-            // console.log(temp[0].value)
           }
         }
       }
@@ -333,12 +334,11 @@ class Main {
       window.addEventListener("resize", function() {
         packPostGrid(8)
       })
-      packPostGrid(8)
-      //Force safari to pack..
-      setTimeout(function(){
-        packPostGrid(8)
-      }, 10);
-      
+      document.addEventListener('readystatechange', () => {
+        if(document.readyState === 'complete') {
+          packPostGrid(8)
+        }
+      })
     }
     document.querySelector('.footer-email').addEventListener('click', function(e) {
       SelectText(this);
@@ -405,7 +405,7 @@ function packPostGrid(g) {
       }
     }
     else {
-      //Fat enough!
+      //Fat enough to party!
       for (let i = 0; i < inline_rows.length; i++ ) {
         let gutters = (inline_rows[i].length - 1) * gutter
         let width_ratio = 0

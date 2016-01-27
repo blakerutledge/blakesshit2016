@@ -37,7 +37,7 @@
 		border-color: $br-grey;
 	}
 		
-	.menu-wrap-name-inner:hover .name-line-hover {
+	.menu-wrap-name-inner:hover .name-line-hover, .menu-wrap-name-inner:focus .name-line-hover {
 		width: 0.5em;
 		margin-right: 0.2em;
 	}

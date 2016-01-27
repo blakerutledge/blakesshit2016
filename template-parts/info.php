@@ -46,7 +46,7 @@ Template Name: Info
 				</div>
 				<div class="info-nav">
 					<div class="info-button">
-						<a href="<? echo get_site_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
+						<a href="<? echo home_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
 							Resume
 						</a>
 					</div>

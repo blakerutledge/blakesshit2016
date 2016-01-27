@@ -81,12 +81,12 @@
 	transform: translateX(0);
 }
 
-.footer-icons-wrap:hover {
+.footer-icons-wrap:hover, .footer-icons-wrap:focus {
 	.footer-icon-pair {
 		opacity: 0.2;
 	}
 
-	.footer-icon-pair:hover {
+	.footer-icon-pair:hover, .footer-icon-pair:focus {
 		opacity: 1;
 	}
 }
@@ -188,23 +188,23 @@
 	.footer-icon-pair-inner:first-child {
 		padding-left: 0em;
 	}
-	.footer-icon-pair:hover .footer-label-about {
+	.footer-icon-pair:hover .footer-label-about, .footer-icon-pair:focus .footer-label-about,  {
 		width: 2.6em;
 		transform: translateX(0);
 	}
-	.footer-icon-pair:hover .footer-label-github {
+	.footer-icon-pair:hover .footer-label-github, .footer-icon-pair:focus .footer-label-github {
 		width: 3.05em;
 		transform: translateX(0);
 	}
-	.footer-icon-pair:hover .footer-label-dribbble {
+	.footer-icon-pair:hover .footer-label-dribbble, .footer-icon-pair:focus .footer-label-dribbble {
 		width: 3.72em;
 		transform: translateX(0);
 	}
-	.footer-icon-pair:hover .footer-label-codepen {
+	.footer-icon-pair:hover .footer-label-codepen, .footer-icon-pair:focus .footer-label-codepen {
 		width: 3.68em;
 		transform: translateX(0);
 	}
-	.footer-icon-pair:hover .footer-label-email {
+	.footer-icon-pair:hover .footer-label-email, .footer-icon-pair:focus .footer-label-email {
 		width: 11em;
 		transform: translateX(0);
 	}

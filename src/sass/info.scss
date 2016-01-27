@@ -55,7 +55,7 @@
 
 	}
 
-	a:hover {
+	a:hover, a:focus {
 		// padding-bottom: 0.05em;
 		background-color: rgba(0,0,0,1);
 
@@ -112,7 +112,7 @@
 	}
 }
 
-.info-button:hover {
+.info-button:hover, .info-button:focus {
 	background-color: $br-black;
 	color: $br-white;
 

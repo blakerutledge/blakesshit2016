@@ -36,7 +36,7 @@
 			<div class="projectsWrap">
 				<div class="info-container">
 					<p class="info-emphasis">I am a Brooklyn-based interactive & motion designer.</p>
-					<p class="info-more">I work as an Artist in Residence at Ogilvy & Mather. I'm passionate about concepting and designing for film and web, hybrid processes, and the outdoors. Here's <a target="_blank" href="<? echo get_site_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf">my resume,</a> if you'd like to get in touch, send me <a class="info-email-fakeout" >an email,</a> I read 'em all.</p>
+					<p class="info-more">I work as an Artist in Residence at Ogilvy & Mather. I'm passionate about concepting and designing for film and web, hybrid processes, and the outdoors. Here's <a target="_blank" href="<? echo home_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf">my resume,</a> and if you'd like to get in touch, send me <a class="info-email-fakeout" >an email,</a> I read 'em all.</p>
 				</div>
 				<div class="info-nav">
 					<a href="projects" class="info-button">
@@ -45,7 +45,7 @@
 						</div>
 					</a>
 					<!--<div class="info-button info-button-resume">
-						<a href="<? echo get_site_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
+						<a href="<? echo home_url(); ?>/wp-content/uploads/2016/01/BlakeRutledge_resume_011016.pdf" class="info-link info-link-resume">
 							Resume
 						</a>
 					</div>-->

@@ -110,17 +110,17 @@
 	margin-right: 0.2em;
 }
 
-.home-work-wrap a:hover .home-work-arrow-1 {
+.home-work-wrap a:hover .home-work-arrow-1, .home-work-wrap a:focus .home-work-arrow-1  {
 	opacity: 1;
 	transform: translateX(0em);
 }
 
-.home-work-wrap a:hover .home-work-arrow-2 {
+.home-work-wrap a:hover .home-work-arrow-2, .home-work-wrap a:focus .home-work-arrow-2 {
 	opacity: 0;
 	transform: translateX(.12em);
 }
 
-.home-work-wrap a:hover .home-work-wrap-inner {
+.home-work-wrap a:hover .home-work-wrap-inner, .home-work-wrap a:focus .home-work-wrap-inner {
 	transform: translateX(0.12em);
 	// color: $br-white;
 	// letter-spacing: 0.08em;

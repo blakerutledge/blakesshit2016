@@ -58,7 +58,7 @@ $gutter: 8px;
 	opacity: 0;
 }
 
-.post-back-wrap-inner:hover .post-back-wrap-inner-line {
+.post-back-wrap-inner:hover .post-back-wrap-inner-line, .post-back-wrap-inner:focus .post-back-wrap-inner-line {
 	// transform: translateX(-0.64em);
 	width: 0.8em;
 
@@ -120,7 +120,7 @@ article {
 
 	}
 
-	a:hover {
+	a:hover, a:focus {
 		// padding-bottom: 0.05em;
 
 		&::after {	
@@ -257,7 +257,7 @@ article {
 		}
 	}
 
-	.post-button:hover {
+	.post-button:hover, .post-button:focus {
 		background-color: $br-grey;
 		color: $br-white;
 
@@ -426,7 +426,7 @@ article {
 
 }
 
-.bottom-nav-next:hover {
+.bottom-nav-next:hover, .bottom-nav-next:focus {
 	color: $br-white;
 	background-color: $br-grey;
 
@@ -477,7 +477,7 @@ article {
 		margin-top: 50px;
 	}
 
-	.bottom-nav-back:hover {
+	.bottom-nav-back:hover, .bottom-nav-back:focus {
 		.bottom-nav-back-line {
 			width: 25%;
 		}

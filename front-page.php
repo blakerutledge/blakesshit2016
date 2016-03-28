@@ -36,7 +36,7 @@
 			<div class="projectsWrap">
 				<div class="info-container">
 					<p class="info-emphasis">I am a Brooklyn-based interactive & motion designer.</p>
-					<p class="info-more">I work as an Artist in Residence at Ogilvy & Mather. I'm passionate about concepting and designing for film and web, hybrid processes, and the outdoors. Here's <a target="_blank" href="http://blakerutledge.com/wp/wp-content/uploads/2016/01/BlakeRutledge_Resume_012616.pdf">my resume,</a> and if you'd like to get in touch, send me <a class="info-email-fakeout" >an email,</a> I read 'em all.</p>
+					<p class="info-more">I work as <span class="strike-through">an Artist in Residence</span> a Designer & Creative Technologist at Ogilvy & Mather. I'm passionate about concepting and designing for film and web, hybrid processes, and the outdoors. Here's <a target="_blank" href="http://blakerutledge.com/wp/wp-content/uploads/2016/01/BlakeRutledge_Resume_032716.pdf">my resume,</a> and if you'd like to get in touch, send me <a class="info-email-fakeout" >an email,</a> I read 'em all.</p>
 				</div>
 				<div class="info-nav">
 					<a href="projects" class="info-button">

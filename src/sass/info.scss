@@ -18,6 +18,23 @@
 	line-height: 1.6em;
 	margin-bottom: 0.4em;
 
+	.strike-through {
+		position: relative;
+		opacity: 0.5;
+		margin-left: 0.12em;
+		margin-right: 0.12em;
+	}
+
+	.strike-through::after {
+		position: absolute;
+		content: "";
+		left: -0.05em;
+		right: -0.05em;
+		bottom: 0.42em;
+		height: 1px;
+		background-color: $br-black;
+	}
+
 	a {
 		display: inline-block;
 		position: relative;

@@ -1,7 +1,10 @@
 <!-- Start the Loop. -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php if ( !in_category('poster-movie') && !in_category('poster-still') ) : ?>
-		<a href="<?php the_permalink(); ?>">
+		<a href="<?php the_permalink();?>" class="<?php
+			if ( in_category( 'three-column' ) ) : echo "three-column-project "; endif;
+			if ( in_category( 'two-column' ) ) : echo "two-column-project "; endif;?>">
+
 			<div class="projectModule <?php 
 				if ( in_category( 'design' ) ) : echo "designProject "; endif;
 				if ( in_category( 'motion' ) ) : echo "motionProject "; endif;

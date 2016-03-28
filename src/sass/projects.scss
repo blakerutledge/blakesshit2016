@@ -244,6 +244,10 @@
 			margin-bottom: .3em;
 		}
 
+		.three-column-project {
+			width: 100%;
+		}
+
 		.projectModule {
 			flex-direction: column;
 			justify-content: flex-start;
@@ -329,6 +333,14 @@
 		a {
 			width: calc(33.33% - .3em);
 			margin-bottom: .3em;
+		}
+
+		.two-column-project {
+			width: calc(66.66% - .3em);
+
+			.projectModule {
+				// padding-right: calc(33.33% -.3em);
+			}
 		}
 
 		.projectModule {
